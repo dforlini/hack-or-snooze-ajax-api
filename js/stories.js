@@ -86,6 +86,8 @@ async function submitStory(evt){
   currentUser.ownStories.unshift(newStory);
   storyList.stories.unshift(newStory);
   $('#submit-story-form')[0].reset();
+  //refreshed story list from server
+  await getAndShowStoriesOnStart();
 
 navAllStories(); // here
 
